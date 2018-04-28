@@ -60,6 +60,7 @@ class Block {
             difficulty
         } = lastBlock;
         difficulty = lastBlock.timestamp + MINE_RATE > currentTime ? difficulty + 1 : difficulty - 1;
+        return difficulty;
     }
 }
 module.exports = Block;

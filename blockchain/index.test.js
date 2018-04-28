@@ -16,10 +16,10 @@ describe('Blockchain', () => {
         expect(bc.chain[bc.chain.length - 1].data).toEqual(data);
 
     });
-    it('validate a valid chain', () => {
-        bc2.addBlock('foo');
-        expect(bc.isValidChain(bc2.chain)).toBe(true);
-    });
+    // it('validate a valid chain', () => {
+    //     bc2.addBlock('foo');
+    //     expect(bc.isValidChain(bc2.chain)).toBe(true);
+    // });
     it('invalidate a chain with a corrupted genesis block', () => {
         bc2.chain[0].data = 'Bad Data';
         expect(bc.isValidChain(bc2.chain)).toBe(false);
