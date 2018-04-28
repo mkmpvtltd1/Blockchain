@@ -23,7 +23,6 @@ class Block {
     }
     static mineBlock(lastBlock, data) {
         let hash, timestamp;
-        const timestamp = Date.now();
         const lastHash = lastBlock.hash;
         let nonce = 0;
         do {
